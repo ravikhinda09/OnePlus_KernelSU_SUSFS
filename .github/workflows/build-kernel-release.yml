@@ -63,7 +63,7 @@ jobs:
             manifest: oneplus_ace5_b.xml
             android_version: android14
             kernel_version: '6.1'
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Select Appropriate SusFS Branch
         id: get-susfs-branch
