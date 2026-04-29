@@ -63,7 +63,7 @@ jobs:
             manifest: oneplus_ace5_b.xml
             android_version: android14
             kernel_version: '6.1'
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: Select Appropriate SusFS Branch
         id: get-susfs-branch
@@ -118,7 +118,7 @@ jobs:
   trigger-release:
     needs:
       - build-batch-1
-    runs-on: self-hosted
+    runs-on: macos-latest
     if: ${{ inputs.make_release }}
     env:
       REPO_OWNER: ${{ github.repository_owner }}
